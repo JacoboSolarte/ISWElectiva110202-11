@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-puj=px*88pkz@v7bfr)ex$m6k1(ef=m6hddem5v=34e2z-u7g%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,14 +77,20 @@ WSGI_APPLICATION = 'GestionReclamos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'reclamos',
         'USER': 'postgres',
-        'PASSWORD': 'Vale0704+',
+        'PASSWORD': 'jacobo',
         'HOST': 'localhost',
         'PORT': '5432',
+    }
+} """
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
